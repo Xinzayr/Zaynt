@@ -28,7 +28,7 @@ export const Reveal = forwardRef<HTMLDivElement, RevealProps>(
     return (
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y }}
+        initial={{ opacity: 1, y }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration, delay, ease: 'easeOut' }}
         className={cn(className)}
@@ -65,7 +65,7 @@ export const RevealItem = forwardRef<HTMLDivElement, RevealItemProps>(
     return (
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 1, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: index * stagger, ease: 'easeOut' }}
         className={cn(className)}
