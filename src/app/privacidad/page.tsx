@@ -40,7 +40,7 @@ const sections = [
     title: '5. Analítica opcional y consentimiento',
     paragraphs: [
       'Microsoft Clarity es una herramienta opcional de analítica de uso que puede registrar interacciones como clics, desplazamientos y sesiones reproducidas para ayudarnos a entender el funcionamiento del sitio. Si aceptas, el identificador de proyecto de Clarity se carga después de guardar la preferencia y se configura el almacenamiento publicitario como denegado y el analítico como autorizado. Si rechazas, no cargamos su script. El formulario de contacto se excluye de las grabaciones mediante enmascaramiento.',
-      'La preferencia se guarda localmente en este navegador para recordar tu decisión. Puedes modificarla en cualquier momento con el control “Privacidad” al pie del sitio o desde esta página. Retirar el consentimiento no borra automáticamente registros que Microsoft ya haya recibido; consulta las políticas de Microsoft Clarity y solicita allí lo que corresponda.',
+      'La preferencia se guarda localmente en este navegador para recordar tu decisión. Puedes modificarla en cualquier momento desde el enlace “Preferencias de privacidad” al pie del sitio. Retirar el consentimiento no borra automáticamente registros que Microsoft ya haya recibido; consulta las políticas de Microsoft Clarity y solicita allí lo que corresponda.',
       'Microsoft puede tratar datos técnicos y de interacción desde otros países, incluido Estados Unidos, conforme a sus términos y mecanismos de transferencia. Antes de activar Clarity para producción, el responsable debe revisar el contrato, la configuración de consentimiento, la región/retención disponible, las opciones de exclusión y la evaluación legal que corresponda.',
     ],
   },
@@ -101,7 +101,7 @@ export default function PrivacidadPage() {
         <section id="preferencias-de-privacidad" className="mt-8 scroll-mt-24 rounded-xl border border-slate-700 bg-slate-900/60 p-5 text-sm leading-6 text-slate-300">
           <h2 className="font-semibold text-white">Preferencias de privacidad</h2>
           <p className="mt-2">
-            Usa el botón “Privacidad” que aparece en la esquina inferior del sitio para aceptar o rechazar la analítica opcional y cambiar tu decisión guardada.
+            La elección se solicita una sola vez y queda guardada en este navegador. Para cambiarla o retirar el consentimiento después, usa el enlace “Preferencias de privacidad” al pie del sitio.
           </p>
         </section>
       </div>

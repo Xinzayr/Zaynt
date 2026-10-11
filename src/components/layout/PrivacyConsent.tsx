@@ -36,7 +36,12 @@ export function PrivacyConsent() {
 
   const enableClarity = useCallback(async () => {
     const projectId = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID
-    if (!projectId) return
+    if (!projectId) {
+      console.error('No se pudo iniciar Microsoft Clarity: falta NEXT_PUBLIC_CLARITY_PROJECT_ID.')
+      setErrorMessage('La analítica no está configurada en este sitio. Tu elección quedó guardada.')
+      setIsOpen(true)
+      return
+    }
 
     try {
       const { default: Clarity } = await import('@microsoft/clarity')
@@ -44,9 +49,18 @@ export function PrivacyConsent() {
       Clarity.consentV2({ ad_Storage: 'denied', analytics_Storage: 'granted' })
       clarityInitialized.current = true
       setErrorMessage('')
+      const script = document.getElementById('clarity-script')
+      script?.addEventListener('error', () => {
+        console.error('No se pudo cargar el script de Microsoft Clarity.')
+        script.remove()
+        clarityInitialized.current = false
+        setErrorMessage('No se pudo conectar con Microsoft Clarity. Revisa tu conexión o la configuración del navegador.')
+        setIsOpen(true)
+      }, { once: true })
     } catch (error) {
       console.error('No se pudo inicializar Microsoft Clarity tras el consentimiento.', error)
       setErrorMessage('Guardamos tu preferencia, pero la analítica no pudo iniciarse.')
+      setIsOpen(true)
     }
   }, [])
 
@@ -103,26 +117,7 @@ export function PrivacyConsent() {
   const shouldShowDialog = isOpen || choice === 'unset' || choice === 'storage-error'
 
   if (!shouldShowDialog) {
-    return (
-      <div className="fixed bottom-4 left-4 z-[60]">
-        <button
-          type="button"
-          onClick={openPreferences}
-          className="rounded-full border border-slate-600 bg-slate-950 px-4 py-2 text-xs font-medium text-slate-200 shadow-lg transition-colors hover:border-slate-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
-          aria-label="Abrir preferencias de privacidad"
-        >
-          Privacidad
-          {choice !== 'unset' && choice !== 'storage-error' && (
-            <span className="sr-only">: preferencia {choice === 'accepted' ? 'aceptada' : 'rechazada'}</span>
-          )}
-        </button>
-        {(errorMessage || choice === 'storage-error') && (
-          <p className="mt-2 max-w-xs rounded-lg bg-slate-950 p-3 text-xs text-slate-200">
-            {errorMessage || 'No se pudo leer tu preferencia guardada en este navegador.'}
-          </p>
-        )}
-      </div>
-    )
+    return null
   }
 
   return (
@@ -135,7 +130,7 @@ export function PrivacyConsent() {
     >
       <h2 className="text-lg font-semibold">Tu privacidad importa</h2>
       <p id="privacy-consent-description" className="mt-2 text-sm leading-6 text-slate-300">
-        Usamos almacenamiento esencial para recordar esta elección. Microsoft Clarity es opcional y, si lo aceptas, recopila interacciones para ayudarnos a mejorar el sitio. No iniciaremos Clarity antes de tu consentimiento. Puedes cambiar tu decisión cuando quieras desde el botón “Privacidad”.
+        Usamos almacenamiento esencial para recordar esta elección. Microsoft Clarity es opcional y, si lo aceptas, recopila interacciones para ayudarnos a mejorar el sitio. No iniciaremos Clarity antes de tu consentimiento. Puedes cambiar tu decisión desde “Preferencias de privacidad” al pie de página.
       </p>
       <p className="mt-2 text-sm">
         <Link href="/privacidad" className="text-slate-100 underline underline-offset-4 hover:text-white">
