@@ -72,13 +72,13 @@ export default function PrivacidadPage() {
       <div className="mx-auto max-w-4xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">ZAYNT · Ecuador</p>
         <h1 className="text-3xl font-bold text-white md:text-5xl">Aviso de privacidad</h1>
-        <p className="mt-5 rounded-xl border border-slate-600 bg-slate-900 p-4 text-sm leading-6 text-slate-200">
+        <p className="glass-surface mt-5 rounded-xl p-4 text-sm leading-6 text-slate-200">
           Borrador informativo. Antes de presentarlo como aviso definitivo, el proveedor responsable debe completar su identidad legal, contacto formal y verificar que las prácticas descritas coincidan con las operaciones reales. Este texto no sustituye asesoría jurídica local.
         </p>
 
         <div className="mt-10 space-y-6">
           {sections.map((section) => (
-            <section key={section.title} className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 md:p-8">
+            <section key={section.title} className="glass-surface rounded-2xl p-6 md:p-8">
               <h2 className="text-xl font-semibold text-white">{section.title}</h2>
               <div className="mt-4 space-y-4 text-sm leading-7 text-slate-300">
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -98,7 +98,7 @@ export default function PrivacidadPage() {
             WhatsApp Business · {siteConfig.whatsappUsername}
           </a>
         </p>
-        <section id="preferencias-de-privacidad" className="mt-8 scroll-mt-24 rounded-xl border border-slate-700 bg-slate-900/60 p-5 text-sm leading-6 text-slate-300">
+        <section id="preferencias-de-privacidad" className="glass-surface mt-8 scroll-mt-24 rounded-xl p-5 text-sm leading-6 text-slate-300">
           <h2 className="font-semibold text-white">Preferencias de privacidad</h2>
           <p className="mt-2">
             La elección se solicita una sola vez y queda guardada en este navegador. Para cambiarla o retirar el consentimiento después, usa el enlace “Preferencias de privacidad” al pie del sitio.

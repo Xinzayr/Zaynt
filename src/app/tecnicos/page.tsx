@@ -43,7 +43,7 @@ export default function TecnicosPage() {
             },
           ].map(({ icon: Icon, title, text }) => (
             <Reveal key={title}>
-              <article className="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+              <article className="glass-surface h-full rounded-2xl p-6">
                 <Icon className="mb-4 h-8 w-8 text-slate-300" aria-hidden="true" />
                 <h2 className="text-xl font-semibold text-gray-950 dark:text-white">{title}</h2>
                 <p className="mt-3 text-sm leading-6 text-gray-600 dark:text-gray-300">{text}</p>
@@ -65,7 +65,7 @@ export default function TecnicosPage() {
         <div className="mx-auto mt-8 grid max-w-5xl gap-6 md:grid-cols-2">
           {technicians.filter((member) => member.featured).map((member) => (
             <Reveal key={member.id}>
-              <article className="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900 md:p-8">
+              <article className="glass-surface h-full rounded-2xl p-6 md:p-8">
                 <div className="flex items-start gap-4">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-slate-400/10 text-slate-200">
                     <UserRound className="h-7 w-7" aria-hidden="true" />

@@ -40,7 +40,7 @@ export default async function NovedadesPage() {
         {posts.length > 0 ? (
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {posts.map((post) => (
-              <article key={post.id} className="rounded-2xl border border-slate-700 bg-slate-900/70 p-6 sm:p-8">
+              <article key={post.id} className="glass-surface rounded-2xl p-6 sm:p-8">
                 <p className="text-xs font-medium uppercase tracking-wider text-slate-400">
                   {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('es-EC') : 'Facebook'}
                 </p>
@@ -61,7 +61,7 @@ export default async function NovedadesPage() {
             ))}
           </div>
         ) : (
-          <section className="mt-10 rounded-2xl border border-slate-700 bg-slate-900/70 p-6 sm:p-8">
+          <section className="glass-surface mt-10 rounded-2xl p-6 sm:p-8">
             <h2 className="text-xl font-semibold text-white">
               {loadFailed ? 'No se pudieron cargar las publicaciones' : 'Feed de Facebook pendiente de conexión'}
             </h2>

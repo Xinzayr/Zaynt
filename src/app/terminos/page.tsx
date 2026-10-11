@@ -83,7 +83,7 @@ export default function TerminosPage() {
       <div className="mx-auto max-w-4xl">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">ZAYNT · Ecuador</p>
         <h1 className="text-3xl font-bold text-white md:text-5xl">Términos de servicio</h1>
-        <p className="mt-5 rounded-xl border border-slate-600 bg-slate-900 p-4 text-sm leading-6 text-slate-200">
+        <p className="glass-surface mt-5 rounded-xl p-4 text-sm leading-6 text-slate-200">
           Borrador informativo para coordinar servicios. Antes de usarlo como documento contractual o publicar una versión definitiva, el proveedor responsable debe completar sus datos legales y revisar estas condiciones con asesoría jurídica local. Nada aquí elimina derechos obligatorios del consumidor.
         </p>
         <p className="mt-6 text-sm leading-6 text-slate-400">
@@ -92,7 +92,7 @@ export default function TerminosPage() {
 
         <div className="mt-10 space-y-8">
           {sections.map((section) => (
-            <section key={section.title} className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 md:p-8">
+            <section key={section.title} className="glass-surface rounded-2xl p-6 md:p-8">
               <h2 className="text-xl font-semibold text-white">{section.title}</h2>
               <div className="mt-4 space-y-4 text-sm leading-7 text-slate-300">
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}

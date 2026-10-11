@@ -23,7 +23,7 @@ import HomeIntro from '@/content/home-intro.mdx'
 const primaryActionClass =
   'inline-flex items-center justify-center gap-2 rounded-xl bg-[radial-gradient(circle_at_top,_#ffffff,_#d4d4d8_45%,_#a1a1aa_100%)] px-7 py-3.5 text-base font-semibold text-slate-950 shadow-[0_0_35px_rgba(212,212,216,0.2)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_45px_rgba(212,212,216,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300'
 const secondaryActionClass =
-  'inline-flex items-center justify-center gap-2 rounded-xl border border-slate-600 bg-slate-900/70 px-7 py-3.5 text-base font-semibold text-slate-100 transition-all duration-200 hover:border-slate-300 hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300'
+  'glass-control inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-base font-semibold text-slate-100 transition-all duration-200 hover:border-slate-300/50 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300'
 
 export const metadata: Metadata = {
   title: 'Servicios informáticos y técnicos',
@@ -170,7 +170,7 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  <div className="rounded-2xl border border-slate-700 bg-slate-950/80 p-5">
+                  <div className="glass-surface rounded-2xl p-5">
                     <div className="mb-4 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-slate-400">
                       <span>Área</span>
                       <span>Modalidad</span>
@@ -184,7 +184,7 @@ export default function HomePage() {
                       ].map(([device, issue]) => (
                         <div
                           key={device}
-                          className="flex items-center justify-between rounded-xl border border-slate-800 bg-slate-900/80 px-3 py-3"
+                          className="glass-surface flex items-center justify-between rounded-xl px-3 py-3"
                         >
                           <div>
                             <p className="font-semibold text-white">{device}</p>
@@ -218,7 +218,7 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
             {services.map((service, index) => (
               <RevealItem key={service.title} index={index} stagger={0.08}>
-                <Card hover variant="elevated" className="h-full border-slate-800 bg-slate-900/80 dark:border-slate-800 dark:bg-slate-900/80">
+                <Card hover variant="elevated" className="h-full">
                   <CardContent className="flex h-full flex-col p-6">
                     <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-slate-400/30 bg-slate-400/10 text-slate-200">
                       <service.icon className="h-6 w-6" aria-hidden="true" />
@@ -251,7 +251,7 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {features.map((feature, index) => (
               <RevealItem key={feature.title} index={index} stagger={0.08}>
-                <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 shadow-[0_18px_40px_rgba(15,23,42,0.35)] transition-transform duration-200 hover:-translate-y-1 hover:border-slate-300/40">
+                <div className="glass-surface rounded-2xl p-6 transition-transform duration-200 hover:-translate-y-1">
                   <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-400/10 text-slate-200">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
@@ -278,7 +278,7 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-3">
             {process.map((step, index) => (
               <RevealItem key={step.number} index={index} stagger={0.1}>
-                <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                <div className="glass-surface rounded-2xl p-6">
                   <span className="inline-flex rounded-full border border-slate-400/30 bg-slate-500/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-200">
                     {step.number}
                   </span>

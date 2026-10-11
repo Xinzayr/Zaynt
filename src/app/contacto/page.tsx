@@ -319,7 +319,7 @@ export default function ContactoPage() {
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-4">
+                <div className="glass-surface rounded-xl p-4">
                   <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-slate-300">
                     <input
                       id="termsAcknowledged"

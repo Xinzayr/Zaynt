@@ -22,7 +22,7 @@ export function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm'
+          ? 'glass-surface border-x-0 border-t-0 border-b border-white/10 shadow-lg'
           : 'bg-transparent'
       )}
       role="banner"
@@ -78,7 +78,7 @@ export function Navbar() {
         <div
           id="mobile-menu"
           className={cn(
-            'md:hidden overflow-hidden transition-all duration-300 ease-in-out border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950',
+            'glass-surface md:hidden overflow-hidden transition-all duration-300 ease-in-out border-x-0 border-b-0 border-t border-white/10',
             isOpen ? 'max-h-96 opacity-100 py-4' : 'max-h-0 opacity-0 py-0'
           )}
           role="navigation"

@@ -44,7 +44,7 @@ export function WhatsAppFloat() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="absolute bottom-16 right-0 w-72 bg-white dark:bg-gray-900 rounded-xl shadow-elevation border border-gray-200 dark:border-gray-700 p-4"
+            className="glass-surface absolute bottom-16 right-0 w-72 rounded-2xl p-4 text-white"
             role="dialog"
             aria-label="Opciones de contacto"
           >
@@ -71,7 +71,7 @@ export function WhatsAppFloat() {
           </motion.div>
         )}
         {isOpen && prefersReducedMotion && (
-          <div className="absolute bottom-16 right-0 w-72 bg-white dark:bg-gray-900 rounded-xl shadow-elevation border border-gray-200 dark:border-gray-700 p-4" role="dialog">
+          <div className="glass-surface absolute bottom-16 right-0 w-72 rounded-2xl p-4 text-white" role="dialog">
             <div className="space-y-3">
               <button
                 onClick={handleClick}

@@ -124,7 +124,7 @@ export function PrivacyConsent() {
     <section
       aria-label="Preferencias de privacidad"
       aria-describedby="privacy-consent-description"
-      className="fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-3xl rounded-2xl border border-slate-600 bg-[#111317] p-5 text-white shadow-2xl sm:p-6"
+      className="glass-panel fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-3xl rounded-2xl p-5 text-white sm:p-6"
       role="dialog"
       aria-modal="false"
     >

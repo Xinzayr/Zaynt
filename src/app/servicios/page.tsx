@@ -99,15 +99,15 @@ export default function ServiciosPage() {
             El mantenimiento presencial a domicilio se coordina únicamente dentro de Guayaquil, con cita, y sujeto a una evaluación de seguridad. Fuera de esa zona se ofrecen consultas, capacitación y asistencia remota cuando el trabajo lo permita.
           </p>
           <div className="grid gap-4 md:grid-cols-3 text-sm">
-            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+            <div className="glass-surface flex items-center gap-2 rounded-xl p-4 text-gray-600 dark:text-gray-400">
               <CheckCircle className="h-5 w-5 text-slate-300 flex-shrink-0" aria-hidden="true" />
               <span>Servicio según catálogo disponible</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+            <div className="glass-surface flex items-center gap-2 rounded-xl p-4 text-gray-600 dark:text-gray-400">
               <CheckCircle className="h-5 w-5 text-slate-300 flex-shrink-0" aria-hidden="true" />
               <span>Cita y zona confirmadas antes de la visita</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+            <div className="glass-surface flex items-center gap-2 rounded-xl p-4 text-gray-600 dark:text-gray-400">
               <CheckCircle className="h-5 w-5 text-slate-300 flex-shrink-0" aria-hidden="true" />
               <span>Alcance, pago y plazo por escrito antes de iniciar</span>
             </div>
@@ -121,7 +121,7 @@ export default function ServiciosPage() {
             Preguntas frecuentes
           </h2>
           <div className="space-y-4">
-            <details className="rounded-xl border border-slate-800 bg-slate-900/70 p-5 text-slate-300">
+            <details className="glass-surface rounded-xl p-5 text-slate-300">
               <summary className="cursor-pointer font-semibold text-white">¿Qué incluye el mantenimiento de computadoras?</summary>
               <p className="mt-3 text-sm leading-6">
                 Puede incluir limpieza interna de polvo, cambio de pasta térmica y optimización del sistema operativo. El alcance final depende de la evaluación y se escribe en la cotización. La duración orientativa compartida es de 2 a 3 horas; no es un plazo garantizado.
@@ -130,25 +130,25 @@ export default function ServiciosPage() {
                 Windows 10 IoT u otra edición se considera solo si la edición, compatibilidad y licencia se verifican antes. No se promete una fecha de soporte sin comprobar la edición y su ciclo oficial. Respalda tus datos antes de entregar el equipo; un disco provisional solo se ofrece si está disponible y se acuerda.
               </p>
             </details>
-            <details className="rounded-xl border border-slate-800 bg-slate-900/70 p-5 text-slate-300">
+            <details className="glass-surface rounded-xl p-5 text-slate-300">
               <summary className="cursor-pointer font-semibold text-white">¿Cómo se cotiza y cuándo empieza el trabajo?</summary>
               <p className="mt-3 text-sm leading-6">
                 Primero explicas por escrito el problema o necesidad. Después se evalúan alcance, modalidad, materiales, precio y plazo. Se puede acordar el pago total por adelantado o 50% antes y 50% al finalizar. El trabajo comienza únicamente después de que ambas partes aprueben la cotización y se cumpla el anticipo allí indicado.
               </p>
             </details>
-            <details className="rounded-xl border border-slate-800 bg-slate-900/70 p-5 text-slate-300">
+            <details className="glass-surface rounded-xl p-5 text-slate-300">
               <summary className="cursor-pointer font-semibold text-white">¿Atienden fuera de Guayaquil?</summary>
               <p className="mt-3 text-sm leading-6">
                 Las visitas y mantenimientos presenciales se limitan a Guayaquil y requieren cita. Para otras zonas se pueden evaluar opciones remotas. Si el lugar o las circunstancias no resultan seguros, no se realiza la visita; se podrá proponer atención remota o un lugar público y concurrido, solo si es viable y ambas partes lo aceptan.
               </p>
             </details>
-            <details className="rounded-xl border border-slate-800 bg-slate-900/70 p-5 text-slate-300">
+            <details className="glass-surface rounded-xl p-5 text-slate-300">
               <summary className="cursor-pointer font-semibold text-white">¿Garantizan la recuperación de datos?</summary>
               <p className="mt-3 text-sm leading-6">
                 No. Antes de iniciar se deben acordar por escrito el criterio de éxito, el precio y cómo se tratarán o conservarán los datos. Solo se cobra si se alcanza el criterio de éxito acordado. No se guarda una copia en la nube sin consentimiento expreso y un plazo de conservación definido.
               </p>
             </details>
-            <details className="rounded-xl border border-slate-800 bg-slate-900/70 p-5 text-slate-300">
+            <details className="glass-surface rounded-xl p-5 text-slate-300">
               <summary className="cursor-pointer font-semibold text-white">¿Qué licencias de software incluyen?</summary>
               <p className="mt-3 text-sm leading-6">
                 Se brinda ayuda para instalar o configurar software con licencias válidas aportadas por el cliente o adquiridas mediante canales autorizados. Las licencias, claves y cuentas se verifican y cotizan aparte; no se ofrecen activaciones no autorizadas.
