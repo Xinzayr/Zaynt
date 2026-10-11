@@ -21,12 +21,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           id={id}
           className={cn(
-            'w-full px-4 py-2.5 rounded-lg border bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400',
+            'glass-control w-full rounded-lg px-4 py-2.5 text-white placeholder:text-slate-400',
             'focus:outline-none focus:ring-2 focus:ring-silver focus:border-transparent',
             'disabled:opacity-50 disabled:cursor-not-allowed',
             error
               ? 'border-slate-300 focus:ring-slate-300 focus:border-slate-300'
-              : 'border-gray-300 dark:border-gray-600',
+              : 'border-white/15',
             className
           )}
           aria-invalid={error ? 'true' : 'false'}

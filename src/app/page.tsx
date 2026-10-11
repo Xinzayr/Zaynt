@@ -158,7 +158,7 @@ export default function HomePage() {
 
             <Reveal delay={0.2} className="relative">
               <div className="glass-panel relative overflow-hidden rounded-[28px] p-5 md:p-7">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(86,217,255,0.18),_transparent_35%)]" aria-hidden="true" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.1),_transparent_35%)]" aria-hidden="true" />
                 <div className="relative">
                   <div className="mb-6 flex items-center justify-between">
                     <div>
@@ -292,7 +292,7 @@ export default function HomePage() {
       </Section>
 
       <Section variant="default" size="md" aria-labelledby="contact-heading">
-        <Reveal className="rounded-[28px] border border-slate-800 bg-[linear-gradient(135deg,_rgba(15,23,42,0.96),_rgba(8,11,23,0.95))] p-8 shadow-[0_30px_80px_rgba(15,23,42,0.45)] md:p-12">
+        <Reveal className="glass-panel rounded-[28px] p-8 md:p-12">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_auto]">
             <div>
               <p className="mb-3 text-xs font-bold uppercase tracking-[0.24em] text-slate-300">Consulta disponibilidad</p>

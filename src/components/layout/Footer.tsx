@@ -53,12 +53,12 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <MessageCircle className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                 <a
-                  href={generateWhatsAppUrl('Hola Brian Jamel, quisiera consultar por un trabajo técnico.', technicians.find((member) => member.id === 'brian-jamel')?.whatsapp)}
+                  href={generateWhatsAppUrl('Hola Brian Hidalgo, quisiera consultar por un trabajo técnico.', technicians.find((member) => member.id === 'brian-jamel')?.whatsapp)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  WhatsApp · Brian Jamel
+                  WhatsApp · Brian Hidalgo
                 </a>
               </li>
               <li className="flex items-center gap-3">

@@ -44,7 +44,7 @@ const MODALITIES = [
 
 const CONTACT_OPTIONS = [
   { value: 'xinzayr', label: 'Xinzayr · Principal · termina en 5959' },
-  { value: 'brian-jamel', label: 'Brian Jamel · Secundario · termina en 9187' },
+  { value: 'brian-jamel', label: 'Brian Hidalgo · Secundario · termina en 9187' },
 ] as const satisfies SelectOption[]
 
 export default function ContactoPage() {
@@ -195,7 +195,7 @@ export default function ContactoPage() {
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="label">
-                      Nombre <span className="text-slate-300" aria-hidden="true">*</span>
+                      Nombre y apellidos <span className="text-slate-300" aria-hidden="true">*</span>
                     </label>
                     <Input
                       id="name"
@@ -203,7 +203,7 @@ export default function ContactoPage() {
                       type="text"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Tu nombre"
+                      placeholder="Ej. Johnny Alvarez"
                       required
                       error={errors.name}
                       disabled={isSubmitting}
@@ -414,12 +414,12 @@ export default function ContactoPage() {
                   WhatsApp Business · Xinzayr
                 </a>
                 <a
-                  href={generateWhatsAppUrl('Hola Brian Jamel, quisiera consultar por un trabajo técnico.', technicians.find((member) => member.id === 'brian-jamel')?.whatsapp)}
+                  href={generateWhatsAppUrl('Hola Brian Hidalgo, quisiera consultar por un trabajo técnico.', technicians.find((member) => member.id === 'brian-jamel')?.whatsapp)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-600 hover:text-gray-950 dark:text-gray-400 dark:hover:text-white"
                 >
-                  WhatsApp · Brian Jamel
+                  WhatsApp · Brian Hidalgo
                 </a>
               </div>
             </Card>

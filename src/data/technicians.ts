@@ -3,8 +3,8 @@ import { Technician } from './schemas'
 export const technicians: Technician[] = [
   {
     id: 'xinzayr',
-    name: 'Xinzayr',
-    nickname: 'Johnny Bryan (Xinzayr)',
+    name: 'Johnny Alvarez',
+    nickname: 'Xinzayr',
     businessUnit: 'ZAYNT Solutions',
     role: 'Colaborador · soporte y soluciones informáticas',
     specialties: [
@@ -28,7 +28,7 @@ export const technicians: Technician[] = [
   },
   {
     id: 'brian-jamel',
-    name: 'Brian Jamel',
+    name: 'Brian Hidalgo',
     businessUnit: 'ZAYNT · Colaborador',
     role: 'Colaborador · optimización, reparación y formación',
     specialties: [

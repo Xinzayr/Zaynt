@@ -28,15 +28,16 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           ref={ref}
           id={id}
           className={cn(
-            'w-full px-4 py-2.5 rounded-lg border bg-white dark:bg-gray-800 text-gray-900 dark:text-white',
+            'glass-control w-full rounded-lg px-4 py-2.5 text-white',
             'focus:outline-none focus:ring-2 focus:ring-silver focus:border-transparent',
             'disabled:opacity-50 disabled:cursor-not-allowed appearance-none',
             'bg-[url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 fill=%27none%27 viewBox=%270 0 20 20%27%3e%3cpath stroke=%27%236b7280%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271.5%27 d=%27M6 8l4 4 4-4%27/%3e%3c/svg%3e")] bg-right-3 bg-center bg-no-repeat pr-10',
             error
               ? 'border-slate-300 focus:ring-slate-300 focus:border-slate-300'
-              : 'border-gray-300 dark:border-gray-600',
+              : 'border-white/15',
             'focus:outline-none focus:ring-2 focus:ring-silver focus:border-transparent',
             'disabled:opacity-50 disabled:cursor-not-allowed',
+            '[&_option]:bg-[#111317] [&_option]:text-white',
             className
           )}
           aria-invalid={error ? 'true' : 'false'}

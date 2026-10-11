@@ -1,8 +1,7 @@
 export function sanitizeInput(input: string): string {
   return input
-    .replace(/[\x00-\x1F\x7F]/g, '')
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '')
     .replace(/\n{3,}/g, '\n\n')
-    .trim()
 }
 
 export function sanitizePhone(phone: string): string {
